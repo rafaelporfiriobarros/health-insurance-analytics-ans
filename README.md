@@ -1,5 +1,8 @@
 # Monitoramento de Precificação, Custos e Qualidade em Planos de Saúde
 
+![ans](imagens/ans.jpg)
+
+
 **Dados públicos da ANS | SQL - Python - BI (Looker Studio)**
 
 ## Visão Geral
