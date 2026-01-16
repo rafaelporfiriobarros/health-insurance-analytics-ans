@@ -75,16 +75,16 @@ Desenvolver uma solução de Business Intelligence e Analytics para acompanhar, 
 - CD_FAIXA_ETARIA: 
 
     - Faixa etária do beneficiário vinculado ao contrato:
-    - (01)  00 (zero) a 18 (dezoito) anos;
-    - (02)  19 (dezenove) a 23 (vinte e três) anos;
-    - (03)  24 (vinte e quatro) a 28 (vinte e oito) anos;
-    - (04)  29 (vinte e nove) a 33 (trinta e três) anos;
-    - (05)  34 (trinta e quatro) a 38 (trinta e oito) anos;
-    - (06)  39 (trinta e nove) a 43 (quarenta e três) anos;
-    - (07)  44 (quarenta e quatro) a 48 (quarenta e oito) anos;
-    - (08)  49 (quarenta e nove) a 53 (cinquenta e três) anos;
-    - (09)  54 (cinquenta e quatro) a 58 (cinquenta e oito) anos;
-    - (10)  59 (cinquenta e nove) anos ou mais.”
+        - (01)  00 (zero) a 18 (dezoito) anos;
+        - (02)  19 (dezenove) a 23 (vinte e três) anos;
+        - (03)  24 (vinte e quatro) a 28 (vinte e oito) anos;
+        - (04)  29 (vinte e nove) a 33 (trinta e três) anos;
+        - (05)  34 (trinta e quatro) a 38 (trinta e oito) anos;
+        - (06)  39 (trinta e nove) a 43 (quarenta e três) anos;
+        - (07)  44 (quarenta e quatro) a 48 (quarenta e oito) anos;
+        - (08)  49 (quarenta e nove) a 53 (cinquenta e três) anos;
+        - (09)  54 (cinquenta e quatro) a 58 (cinquenta e oito) anos;
+        - (10)  59 (cinquenta e nove) anos ou mais.”
     - Nota:  As faixas etárias da NTRP seguem o determinado pelo Art. 2º da Resolução Normativa ANS Nº 563, de 15 de dezembro de 2022.
 
 - ANO_MES: Identificador do mês em que o plano estava ativo e disponível para comercialização (formato AAAAMM)
