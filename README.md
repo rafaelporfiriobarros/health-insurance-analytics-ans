@@ -69,6 +69,8 @@ Desenvolver uma solução de Business Intelligence e Analytics para acompanhar, 
 
 ## EXPLICAÇÃO COMPLETA DO PROJETO
 
+![diagrama](imagens/diagrama_dw.png)
+
 ### ETAPA 1 — COLETA DE DADOS (FONTES)
 
 Foram utilizadas **duas bases oficiais da ANS:**
