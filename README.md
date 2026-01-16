@@ -69,54 +69,54 @@ Desenvolver uma solução de Business Intelligence e Analytics para acompanhar, 
 
 ## Dicionário da tabela precificacao_ans.csv
 
-- ID_PLANO: Identificação única do plano.
-- CD_NOTA: Código de registro da nota técnica na ANS - identificação única da nota técnica.
-- NT_TIPO: Tipo de nota técnica sendo ÚNICA ou MÚLTIPLA
-- CD_FAIXA_ETARIA: 
+- **ID_PLANO**: Identificação única do plano.
+- **CD_NOTA**: Código de registro da nota técnica na ANS - identificação única da nota técnica.
+- **NT_TIPO**: Tipo de nota técnica sendo ÚNICA ou MÚLTIPLA
+- **CD_FAIXA_ETARIA**: 
 
-    - Faixa etária do beneficiário vinculado ao contrato:
-        - (01)  00 (zero) a 18 (dezoito) anos;
-        - (02)  19 (dezenove) a 23 (vinte e três) anos;
-        - (03)  24 (vinte e quatro) a 28 (vinte e oito) anos;
-        - (04)  29 (vinte e nove) a 33 (trinta e três) anos;
-        - (05)  34 (trinta e quatro) a 38 (trinta e oito) anos;
-        - (06)  39 (trinta e nove) a 43 (quarenta e três) anos;
-        - (07)  44 (quarenta e quatro) a 48 (quarenta e oito) anos;
-        - (08)  49 (quarenta e nove) a 53 (cinquenta e três) anos;
-        - (09)  54 (cinquenta e quatro) a 58 (cinquenta e oito) anos;
-        - (10)  59 (cinquenta e nove) anos ou mais.”
-    - Nota:  As faixas etárias da NTRP seguem o determinado pelo Art. 2º da Resolução Normativa ANS Nº 563, de 15 de dezembro de 2022.
+    - **Faixa etária do beneficiário vinculado ao contrato**:
+        - **(01)**  00 (zero) a 18 (dezoito) anos;
+        - **(02)**  19 (dezenove) a 23 (vinte e três) anos;
+        - **(03)**  24 (vinte e quatro) a 28 (vinte e oito) anos;
+        - **(04)**  29 (vinte e nove) a 33 (trinta e três) anos;
+        - **(05)**  34 (trinta e quatro) a 38 (trinta e oito) anos;
+        - **(06)**  39 (trinta e nove) a 43 (quarenta e três) anos;
+        - **(07)**  44 (quarenta e quatro) a 48 (quarenta e oito) anos;
+        - **(08)**  49 (quarenta e nove) a 53 (cinquenta e três) anos;
+        - **(09)**  54 (cinquenta e quatro) a 58 (cinquenta e oito) anos;
+        - **(10)**  59 (cinquenta e nove) anos ou mais.”
+    - **Nota**:  As faixas etárias da NTRP seguem o determinado pelo Art. 2º da Resolução Normativa ANS Nº 563, de 15 de dezembro de 2022.
 
-- ANO_MES: Identificador do mês em que o plano estava ativo e disponível para comercialização (formato AAAAMM)
-- VCM: Valor Comercial da Mensalidade informado na Nota Técnica do plano (Coluna T do Anexo II-B da Resolução Normativa ANS Nº 564, de 15 de dezembro de 2022)
+- **ANO_MES**: Identificador do mês em que o plano estava ativo e disponível para comercialização (formato AAAAMM)
+- **VCM**: Valor Comercial da Mensalidade informado na Nota Técnica do plano (Coluna T do Anexo II-B da Resolução Normativa ANS Nº 564, de 15 de dezembro de 2022)
 Nota: O Valor Comercial é um valor de referência e pode apresentar diferenças em relação aos preços de comercialização praticados nas tabelas de venda utilizadas pelas operadoras. Os preços efetivamente praticados para a contratação dos produtos devem estar dentro dos limites de comercialização estabelecidos em normativo, quais sejam: 
 Limite máximo: 30% acima do Valor Comercial; 
 Limite mínimo: o maior valor entre o valor da despesa assistencial estimada e o limiar de 30% abaixo do Valor Comercial;
-- PCT_DESP_ASS: Despesa assistencial é a proporção de “Despesa Assistencial Líquida por Exposto com Margem de Segurança Estatística por Exposto” (Coluna K do Anexo II-B da Resolução Normativa ANS Nº 564, de 15 de dezembro de 2022) sobre o Valor Comercial da Mensalidade.
-- PCT_CARREG: Carregamentos referem-se às despesas não assistenciais que são adicionadas na composição do preço de venda. Tais despesas são informadas na nota técnica do plano, conforme disposto no Anexo II-B da Resolução Normativa ANS Nº 564, de 15 de dezembro de 2022. 
+- **PCT_DESP_ASS**: Despesa assistencial é a proporção de “Despesa Assistencial Líquida por Exposto com Margem de Segurança Estatística por Exposto” (Coluna K do Anexo II-B da Resolução Normativa ANS Nº 564, de 15 de dezembro de 2022) sobre o Valor Comercial da Mensalidade.
+- **PCT_CARREG**: Carregamentos referem-se às despesas não assistenciais que são adicionadas na composição do preço de venda. Tais despesas são informadas na nota técnica do plano, conforme disposto no Anexo II-B da Resolução Normativa ANS Nº 564, de 15 de dezembro de 2022. 
 Carregamento Total é a soma das “Despesas de Comercialização por beneficiário” (coluna M), das “Outras Despesas da carteira de planos por beneficiáro” (coluna N), das “Despesas Administrativas por beneficiário” (coluna O) e do “Valor da Margem de Lucro por Beneficiário” (coluna R).
 A métrica é expressa como proporção do Valor Comercial da Mensalidade.
-- PCT_CARREG_ADMIN: Carregamento administrativo é a proporção de “Despesas Administrativas por Beneficiário” (coluna O do Anexo II-B da Resolução Normativa ANS Nº 564, de 15 de dezembro de 2022) sobre o Valor Comercial da Mensalidade.
-- PCT_CARREG_COML: Carregamento comercial é a proporção de “Despesas de Comercialização por Beneficiário” (coluna M do Anexo II-B da Resolução Normativa ANS Nº 564, de 15 de dezembro de 2022) sobre o Valor Comercial da Mensalidade.
-- PCT_CARREG_LUCRO: Carregamento de lucro é a proporção de “Valor da Margem de Lucro por Beneficiário” (coluna R do Anexo II-B da Resolução Normativa ANS Nº 564, de 15 de dezembro de 2022) sobre o Valor Comercial da Mensalidade.
+- **PCT_CARREG_ADMIN**: Carregamento administrativo é a proporção de “Despesas Administrativas por Beneficiário” (coluna O do Anexo II-B da Resolução Normativa ANS Nº 564, de 15 de dezembro de 2022) sobre o Valor Comercial da Mensalidade.
+- **PCT_CARREG_COML**: Carregamento comercial é a proporção de “Despesas de Comercialização por Beneficiário” (coluna M do Anexo II-B da Resolução Normativa ANS Nº 564, de 15 de dezembro de 2022) sobre o Valor Comercial da Mensalidade.
+- **PCT_CARREG_LUCRO**: Carregamento de lucro é a proporção de “Valor da Margem de Lucro por Beneficiário” (coluna R do Anexo II-B da Resolução Normativa ANS Nº 564, de 15 de dezembro de 2022) sobre o Valor Comercial da Mensalidade.
 
 ## Dicionário da tabela igr_ans.csv
 
-- REGISTRO_ANS: Registro de operadora de plano privado de assistência à saúde concedido pela ANS a pessoa jurídica para operação no setor de saúde suplementar. 
-- RAZAO_SOCIAL: Razão Social da Operadora de Plano de Assistência à Saúde
-- COBERTURA: Categorias de cobertura de produto por tipo de segmentação assistencial:
+- **REGISTRO_ANS**: Registro de operadora de plano privado de assistência à saúde concedido pela ANS a pessoa jurídica para operação no setor de saúde suplementar. 
+- **RAZAO_SOCIAL**: Razão Social da Operadora de Plano de Assistência à Saúde
+- **COBERTURA**: Categorias de cobertura de produto por tipo de segmentação assistencial:
  Assistência Médica (cobertura médico-hospitalar)
  Exclusivamente odontológica
- - IGR: Índice Geral de Reclamação calculado para o mês de competência
- - QTD_RECLAMACOES: Quantidade de reclamações de beneficiários de planos de saúde apuradas na NIP (Notificação de Investigação Preliminar)
- - QTD_BENEFICIARIOS: Quantidade de beneficiários que tiveram reclamações registradas na ANS no mês de competência
- - PORTE_OPERADORA: Classificação da operadora, conforme quantidade de beneficiários com vínculo ativo no mês mais recente disponível no SIB:
-    - Grande (acima de 100 mil  vínculos de beneficiário ativos)
-    - Médio (de 20 mil a 100 mil vínculos de beneficiário ativos)
-    - Pequeno (abaixo de 20 mil vínculos de beneficiário ativos)
-- COMPETENCIA: Refere-se ao ano e mês de competência das reclamações dos beneficiários (ou seja, do numerador do IGR)
-- COMPETENCIA_BENEFICIARIO: Refere-se ao ano e mês de competência das informações de beneficiários (ou seja, do denominador do IGR)
-- DT_ATUALIZACAO: Data e hora da última atualização do arquivo. Os campos sem preenchimento de data indicam que a base está congelada e, portanto, não foi modificada na última atualização.
+ - **IGR**: Índice Geral de Reclamação calculado para o mês de competência
+ - **QTD_RECLAMACOES**: Quantidade de reclamações de beneficiários de planos de saúde apuradas na NIP (Notificação de Investigação Preliminar)
+ - **QTD_BENEFICIARIOS**: Quantidade de beneficiários que tiveram reclamações registradas na ANS no mês de competência
+ - **PORTE_OPERADORA**: Classificação da operadora, conforme quantidade de beneficiários com vínculo ativo no mês mais recente disponível no SIB:
+    - **Grande** (acima de 100 mil  vínculos de beneficiário ativos)
+    - **Médio** (de 20 mil a 100 mil vínculos de beneficiário ativos)
+    - **Pequeno** (abaixo de 20 mil vínculos de beneficiário ativos)
+- **COMPETENCIA**: Refere-se ao ano e mês de competência das reclamações dos beneficiários (ou seja, do numerador do IGR)
+- **COMPETENCIA_BENEFICIARIO**: Refere-se ao ano e mês de competência das informações de beneficiários (ou seja, do denominador do IGR)
+- **DT_ATUALIZACAO**: Data e hora da última atualização do arquivo. Os campos sem preenchimento de data indicam que a base está congelada e, portanto, não foi modificada na última atualização.
 
 
 ## EXPLICAÇÃO COMPLETA DO PROJETO
