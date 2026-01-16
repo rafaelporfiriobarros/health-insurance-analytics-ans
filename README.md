@@ -67,29 +67,135 @@ Desenvolver uma solução de Business Intelligence e Analytics para acompanhar, 
 
 - Granularidade: Operadora × Cobertura × Mês
 
-## Modelagem de Dados
+## EXPLICAÇÃO COMPLETA DO PROJETO
 
-O projeto utiliza um **modelo estrela (Star Schema)**, com **duas tabelas fato independentes**, respeitando as diferentes granularidades das bases.
+### ETAPA 1 — COLETA DE DADOS (FONTES)
 
-**Tabelas Fato**
+Foram utilizadas **duas bases oficiais da ANS:**
 
-- fato_precificacao
+**1. Precificação de Planos**
 
-- fato_igr
+- Valor Comercial da Mensalidade (VCM)
 
-**Tabelas Dimensão**
+- Componentes do preço
+
+- Faixa etária
+
+- Série histórica mensal
+
+**2. Índice Geral de Reclamações (IGR)**
+
+- Reclamações registradas
+
+- Número de beneficiários
+
+- Porte da operadora
+
+- Tipo de cobertura
+
+- Série histórica mensal
+
+### ETAPA 2 — ETL EM PYTHON (INGESTÃO)
+
+Foram criados **dois scripts ETL:**
+
+**etl_ingestao_precificacao.py**
+
+Responsável por:
+
+- Ler CSV da ANS
+
+- Tratar encoding (UTF-8, Latin-1, BOM)
+
+- Corrigir separador decimal brasileiro
+
+- Converter tipos (int, float, date)
+
+- Carregar dados em stg_precificacao
+
+**etl_ingestao_igr.py**
+
+Responsável por:
+
+- Ler CSV do IGR
+
+- Tratar inconsistência de schema
+
+- Normalizar nomes de colunas
+
+- Converter métricas numéricas
+
+- Carregar dados em stg_igr
+
+Durante o projeto, foram tratados problemas reais de produção, como:
+
+- BOM invisível em CSV
+
+- Encoding quebrado (MÃºltipla)
+
+- Divergência entre schema do CSV e do banco
+
+- Limite de parâmetros em INSERTs grandes
+
+### ETAPA 3 — STAGING (POSTGRESQL)
+
+As tabelas de staging armazenam os dados brutos tratados, sem regras de negócio:
+
+- stg_precificacao
+
+- stg_igr
+
+Características:
+
+- Sem chave primária
+
+- Sem agregações
+
+- Usadas apenas como fonte para o modelo analítico
+
+### ETAPA 4 — MODELAGEM DIMENSIONAL (STAR SCHEMA)
+
+Foi criado um modelo estrela, padrão em Analytics e BI.
+
+**Dimensões**
+
+- dim_tempo → eixo temporal mensal
+
+- dim_plano → tipo de plano
+
+- dim_faixa_etaria → segmentação etária
+
+**Fatos**
+
+- fato_precificacao → métricas de preço
+
+- fato_reclamacoes → métricas de reclamação
+
+A integração entre preços e reclamações ocorre via:
 
 - dim_tempo
 
-- dim_operadora
+### ETAPA 5 — CARGA ANALÍTICA (DML)
 
-- dim_plano
+Foram criados scripts SQL para:
 
-- dim_faixa_etaria
+- Popular dimensões com valores únicos
 
-- dim_cobertura
+- Popular fatos com métricas numéricas
 
-A integração ocorre **via dimensões compartilhadas**, evitando associações indevidas entre planos e reclamações.
+- Garantir integridade referencial
+
+### ETAPA 6 — INTEGRAÇÃO PREÇO × RECLAMAÇÃO
+
+A integração permite análises como:
+
+- Evolução do VCM vs IGR
+
+- Tipo de plano vs qualidade percebida
+
+- Faixa etária vs custo e reclamação
+
+- Base para correlação estatística
 
 ## Stack Tecnológico
 
