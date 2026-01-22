@@ -315,7 +315,7 @@ provavelmente esse aumento de reclamações fazem todo o sentido.
 - R: De **2015** a **2025** temos um **IGR** médio de **91.85** até **105.62**. 
 As maiores médias ficaram nos anos de **2022, 2021, 2024 e 2019**.
 
-**13. Quando o preço médio sobe, o IGR sobe ou desce?**
+**13. QUANDO O PREÇO MÉDIO SOBE, O IGR SOBE OU DESCE?**
 
 - R: Não sobe constantemente, podemos ver que o **preço médio** de **2020** 
 até **2025** foi de **R$ 700** até **R$ 1.114**. O **IGR** médio foi de **72.62** em **2020**, **176.73** em **2021**, **352.09** em **2022**, e depois caiu para **84.92** em **2023** com um aumento de preço médio de **R$ 779.70** em 2022 para **R$ 907.84** em **2023**, então não seguiu um aumento constante conforme o aumento do preço médio dos planos.
