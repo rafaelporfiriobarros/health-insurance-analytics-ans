@@ -288,6 +288,29 @@ A integração permite análises como:
     - **05/2019** com **415.82** de IGR médio.
     - **03/2024** com **380.56** de IGR médio.
 
+**8. QUAL O PREÇO MÉDIO POR TIPO DE PLANO?**
+
+- R: O plano **Mltipla** possui um preço médio de **R$ 1689.66**
+- E o plano **nica** possui um preço médio de **R$ 740.34**.
+
+**9. QUAL FAIXA ETÁRIA PAGA MAIS?**
+
+- R: As faixas etárias 10, 9 e 8 são as que pagam mais, ou seja, as faixas etárias de 49 anos ou mais. 
+
+**10. COMO O PREÇO VARIA POR FAIXA ETÁRIA AO LONGO DO TEMPO?**
+
+- R: Ordenando as faixas etárias de 1 a 10 iniciando pelo ano de 2020 até o final em 2025 
+podemos ver que há um aumento significativo entre todas as faixas a partir de 2023. 
+
+**11. QUAIS PERÍODOS TIVERAM MAIS RECLAMAÇÕES?**
+
+- R: Podemos ver que a partir do ano de 2023, no mês de agosto, tiveram **35.185** reclamações, 
+seguido pelo mesmo ano de (2023), no mês de outubro com **34.459** reclamações. 
+Em terceiro lugar veio o ano de 2024 no mês de julho com **33.825** reclamações.
+Como vemos anteriormente que o aumento significativo dos planos iniciou-se basicamente em 2023, 
+provavelmente esse aumento de reclamações fazem todo o sentido.
+
+
 ## Stack Tecnológico
 
 - **Banco de Dados:** PostgreSQL
