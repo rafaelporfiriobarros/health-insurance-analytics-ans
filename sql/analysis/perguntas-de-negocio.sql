@@ -1,5 +1,3 @@
--- BLOCO 01 - PERGUNTAS BÁSICAS 
-
 -- 1. QUANTOS REGISTROS EXISTEM EM CADA TABELA FATO?
 
 select 'fato_precificacao' as tabela, count(*) from fato_precificacao
@@ -21,8 +19,6 @@ from fato_precificacao;
 
 select avg(igr) as igr_medio
 from fato_reclamacoes;
-
--- BLOCO 2 — VISÃO TEMPORAL
 
 -- 5. COMO O PREÇO MÉDIO EVOLUI AO LONGO DO TEMPO?
 
@@ -51,17 +47,5 @@ join dim_tempo as t
 on r.id_tempo = t.id_tempo
 group by t.ano, t.mes
 order by igr_medio desc;
+
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
