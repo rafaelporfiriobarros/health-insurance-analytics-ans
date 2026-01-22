@@ -84,5 +84,27 @@ group by t.ano, t.mes
 order by total_reclamacoes desc;
 
 
+-- 12. QUAL O IGR MÉDIO POR ANO?
+
+select t.ano, avg(r.igr) as igr_medio
+from fato_reclamacoes as r
+join dim_tempo as t
+on r.id_tempo = t.id_tempo
+group by t.ano
+order by t.ano;
+
+-- 13. Quando o preço médio sobe, o IGR sobe ou desce?
+
+select t.ano, avg(p.vcm) as preco_medio, avg(r.igr) as igr_medio
+from fato_precificacao as p
+join fato_reclamacoes as r
+on p.id_tempo = r.id_tempo
+join dim_tempo as t 
+on p.id_tempo = t.id_tempo
+group by t.ano
+order by t.ano;
+
+
+-
 
 	
