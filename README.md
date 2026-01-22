@@ -255,38 +255,38 @@ A integração permite análises como:
 
 **1. QUANTOS REGISTROS EXISTEM EM CADA TABELA FATO?**
 
-- R: HÁ 1.048.575 REGISTROS NA TABELA fato_precificacao E 146.495 REGISTROS NA TABELA fato_reclamacoes.
+- R: Há **1.048.575** registros na tabela **fato_precificacao** e **146.495** registros na tabela **fato_reclamacoes**.
 
 **2. QUAL É O PERÍODO COBERTO PELOS DADOS?**
 
-- R: O PERÍODO INICIA EM 01/2015 E VAI ATÉ 12/2025.
+- R: O período inicia em **01/2015** e vai até **12/2025**.
 
 **3. QUAL É O PREÇO MÉDIO DOS PLANOS?**
 
-- R: O PREÇO MÉDIO DOS PLANOS É DE R$ 857.26.
+- R: O preço médio dos planos é de **R$ 857.26**.
 
 **4. QUAL É O IGR MÉDIO DO PERÍODO?**
 
-- R: O IGR MÉDIO DO PERÍODO É DE 111.013.
+- R: O IGR médio do período é de **111.013**.
 
 **5. COMO O PREÇO MÉDIO EVOLUI AO LONGO DO TEMPO?**
 
-- R: A PARTIR DE 06/2020 TEMOS UMA MÉDIA DE PREÇO MÉDIO(VCM) DE R$ 686.90.
-- E NO FINAL EM 06/2025 TEMOS UMA MÉDIA DE PREÇO MÉDIO(VCM) DE R$ 1.130.02.
+- R: A partir de **06/2020** temos um média de (VCM) de **R$ 686.90**.
+- E no final de **06/2025** temos uma média de (VCM) de **R$ 1.130.02**.
 
 **6. COMO O TOTAL DE RECLAMAÇÕES EVOLUI AO LONOGO DO TEMPO ?**
 
-- R: A PARTIR DE 01/2015 TEMOS UM TOTAL DE 6.956 RECLAMAÇÕES.
-- E NO FINAL EM 12/2025 TEMOS UM TOTAL DE 22.829 RECLAMAÇÕES.
+- R: A partir de **01/2015** temos um total de **6.956** reclamações.
+- E no final de **12/2025** temos um total de **22.829** reclamações.
 
 **7. QUAIS MESES TIVERAM MAIOR IGR MÉDIO?**
 
-- R: OS 5 PRIMEIROS MESES DO MAIOR PARA O MENOR: 
-    - 12/2022 COM 3.056 DE IGR MÉDIO
-    - 12/2021 COM 1.359 DE IGR MÉDIO
-    - 10/2015 665.22 DE IGR MÉDIO
-    - 05/2019 COM 415.82 DE IGR MÉDIO
-    - 03/2024 COM 380.56 DE IGR MÉDIO
+- R: Os 5 primeiros meses do maior para o menor: 
+    - **12/2022** com **3.056** de IGR médio.
+    - **12/2021** com **1.359** de IGR médio.
+    - **10/2015** com **665.22** de IGR médio.
+    - **05/2019** com **415.82** de IGR médio.
+    - **03/2024** com **380.56** de IGR médio.
 
 ## Stack Tecnológico
 
