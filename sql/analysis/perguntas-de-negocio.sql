@@ -50,13 +50,13 @@ order by igr_medio desc;
 
 -- 8. Qual o preço médio por tipo de plano?
 
-SELECT
+select
     p.nt_tipo,
-    AVG(f.vcm) AS preco_medio
-FROM fato_precificacao f
-JOIN dim_plano p ON f.id_plano = p.id_plano
-GROUP BY p.nt_tipo
-ORDER BY preco_medio DESC;
+    AVG(f.vcm) as preco_medio
+from fato_precificacao f
+join dim_plano p on f.id_plano = p.id_plano
+group by p.nt_tipo
+order by preco_medio desc;
 
 -- 9. Qual faixa etária paga mais?
 
@@ -102,9 +102,44 @@ on p.id_tempo = r.id_tempo
 join dim_tempo as t 
 on p.id_tempo = t.id_tempo
 group by t.ano
-order by t.ano;
+order by preco_medio;
 
 
--
+-- 14. Meses caros têm mais ou menos reclamações?
+
+select
+    t.ano,
+    t.mes,
+    AVG(p.vcm) as preco_medio,
+    SUM(r.qtd_reclamacoes) as total_reclamacoes
+from fato_precificacao p
+join fato_reclamacoes r on p.id_tempo = r.id_tempo
+join dim_tempo t on p.id_tempo = t.id_tempo
+group by t.ano, t.mes
+order by preco_medio desc;
+
+-- 15. Qual foi a variação do preço ano a ano? 
+
+select t.ano, avg(f.vcm) as preco_medio, 
+       lag(avg(f.vcm)) over(order by t.ano) as preco_ano_anterior
+from fato_precificacao as f
+join dim_tempo as t 
+on f.id_tempo = t.id_tempo
+group by t.ano;
+
+-- 16. Existe diferença entre o aumento de preço e reclamações?
+
+select
+    t.ano,
+    avg(p.vcm) as preco_medio,
+    LAG(avg(r.igr)) over (order by t.ano) as igr_ano_anterior
+from fato_precificacao p
+join fato_reclamacoes r on p.id_tempo = r.id_tempo
+join dim_tempo t on p.id_tempo = t.id_tempo
+group by t.ano;
+
+
+
+
 
 	

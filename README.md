@@ -320,6 +320,18 @@ As maiores médias ficaram nos anos de **2022, 2021, 2024 e 2019**.
 - R: Não sobe constantemente, podemos ver que o **preço médio** de **2020** 
 até **2025** foi de **R$ 700** até **R$ 1.114**. O **IGR** médio foi de **72.62** em **2020**, **176.73** em **2021**, **352.09** em **2022**, e depois caiu para **84.92** em **2023** com um aumento de preço médio de **R$ 779.70** em 2022 para **R$ 907.84** em **2023**, então não seguiu um aumento constante conforme o aumento do preço médio dos planos.
 
+**14. MESES CAROS TÊM MAIS OU MENOS RECLAMAÇÕES?**
+
+- R: Ordenando pelo **preço médio** dos planos **(vcm)** do **maior** valor para o **menor** vemos que não há mais **reclamações** para os meses mais caros. 
+
+**15. QUAL FOI A VARIAÇÃO DO PREÇO ANO A ANO?**
+
+- R: A variação do preço médio dos planos inicia em 2020 com R$ 700.26. 2021 vai para R$ 727.83. 
+  Em seguida vai para R$ 779.90, depois vai para 908.01. 2024 chega em R$ 1.053.35 e finaliza em 2025 com R$ 1.114.13, ou seja, a partir de 2023 tivemos um salto significativo no preço médio dos planos. 
+
+**16. EXISTE DIFERENÇA ENTRE AUMENTO DE PREÇO E RECLAMAÇÕES?**
+
+- R: De **2020** até **2025** os preços vão subindo, o **IGR** inicia em **2021**, sobe em **2022** e **2023**, mas cai bastante em **2024**, depois volta a subir novamente em **2025**. Por tanto a única diferença significativa foi nesse período do **IGR** de **2023 - 2024**. De um modo geral é notável que quando houve aumento de preços na maioria de cada ano houve também reclamações. E novamente no ano de **2023** houve o maior índice de reclamações. 
 
 
 
