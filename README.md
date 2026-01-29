@@ -253,33 +253,33 @@ A integração permite análises como:
 
 ## QUERIES - PERGUNTAS DE NEGÓCIO
 
-**1. QUANTOS REGISTROS EXISTEM EM CADA TABELA FATO?**
+**QUANTOS REGISTROS EXISTEM EM CADA TABELA FATO?**
 
 - R: Há **1.048.575** registros na tabela **fato_precificacao** e **146.495** registros na tabela **fato_reclamacoes**.
 
-**2. QUAL É O PERÍODO COBERTO PELOS DADOS?**
+**QUAL É O PERÍODO COBERTO PELOS DADOS?**
 
 - R: O período inicia em **01/2015** e vai até **12/2025**.
 
-**3. QUAL É O PREÇO MÉDIO DOS PLANOS?**
+**QUAL É O PREÇO MÉDIO DOS PLANOS?**
 
 - R: O preço médio dos planos é de **R$ 857.26**.
 
-**4. QUAL É O IGR MÉDIO DO PERÍODO?**
+**QUAL É O IGR MÉDIO DO PERÍODO?**
 
 - R: O IGR médio do período é de **111.013**.
 
-**5. COMO O PREÇO MÉDIO EVOLUI AO LONGO DO TEMPO?**
+**COMO O PREÇO MÉDIO EVOLUI AO LONGO DO TEMPO?**
 
 - R: A partir de **06/2020** temos um média de (VCM) de **R$ 686.90**.
 - E no final de **06/2025** temos uma média de (VCM) de **R$ 1.130.02**.
 
-**6. COMO O TOTAL DE RECLAMAÇÕES EVOLUI AO LONOGO DO TEMPO ?**
+**COMO O TOTAL DE RECLAMAÇÕES EVOLUI AO LONOGO DO TEMPO ?**
 
 - R: A partir de **01/2015** temos um total de **6.956** reclamações.
 - E no final de **12/2025** temos um total de **22.829** reclamações.
 
-**7. QUAIS MESES TIVERAM MAIOR IGR MÉDIO?**
+**QUAIS MESES TIVERAM MAIOR IGR MÉDIO?**
 
 - R: Os 5 primeiros meses do maior para o menor: 
     - **12/2022** com **3.056** de IGR médio.
@@ -288,21 +288,21 @@ A integração permite análises como:
     - **05/2019** com **415.82** de IGR médio.
     - **03/2024** com **380.56** de IGR médio.
 
-**8. QUAL O PREÇO MÉDIO POR TIPO DE PLANO?**
+**QUAL O PREÇO MÉDIO POR TIPO DE PLANO?**
 
 - R: O plano **Mltipla** possui um preço médio de **R$ 1689.66**
 - E o plano **nica** possui um preço médio de **R$ 740.34**.
 
-**9. QUAL FAIXA ETÁRIA PAGA MAIS?**
+**QUAL FAIXA ETÁRIA PAGA MAIS?**
 
 - R: As faixas etárias **10**, **9** e **8** são as que pagam mais, ou seja, as faixas etárias de **49 anos** ou mais. 
 
-**10. COMO O PREÇO VARIA POR FAIXA ETÁRIA AO LONGO DO TEMPO?**
+**COMO O PREÇO VARIA POR FAIXA ETÁRIA AO LONGO DO TEMPO?**
 
 - R: Ordenando as faixas etárias de **1 a 10** iniciando pelo ano de **2020 até o final em 2025** 
 podemos ver que há um aumento significativo entre todas as faixas a partir de **2023**. 
 
-**11. QUAIS PERÍODOS TIVERAM MAIS RECLAMAÇÕES?**
+**QUAIS PERÍODOS TIVERAM MAIS RECLAMAÇÕES?**
 
 - R: Podemos ver que a partir do ano de **2023**, no mês de **agosto**, tiveram **35.185** reclamações, 
 seguido pelo mesmo ano de **(2023)**, no mês de outubro com **34.459** reclamações. 
@@ -310,26 +310,26 @@ Em terceiro lugar veio o ano de **2024** no mês de **julho** com **33.825** rec
 Como vemos anteriormente que o aumento significativo dos planos iniciou-se basicamente em **2023**, 
 provavelmente esse aumento de reclamações fazem todo o sentido.
 
-**12. QUAL O IGR MÉDIO POR ANO?**
+**QUAL O IGR MÉDIO POR ANO?**
 
 - R: De **2015** a **2025** temos um **IGR** médio de **91.85** até **105.62**. 
 As maiores médias ficaram nos anos de **2022, 2021, 2024 e 2019**.
 
-**13. QUANDO O PREÇO MÉDIO SOBE, O IGR SOBE OU DESCE?**
+**QUANDO O PREÇO MÉDIO SOBE, O IGR SOBE OU DESCE?**
 
 - R: Não sobe constantemente, podemos ver que o **preço médio** de **2020** 
 até **2025** foi de **R$ 700** até **R$ 1.114**. O **IGR** médio foi de **72.62** em **2020**, **176.73** em **2021**, **352.09** em **2022**, e depois caiu para **84.92** em **2023** com um aumento de preço médio de **R$ 779.70** em 2022 para **R$ 907.84** em **2023**, então não seguiu um aumento constante conforme o aumento do preço médio dos planos.
 
-**14. MESES CAROS TÊM MAIS OU MENOS RECLAMAÇÕES?**
+**MESES CAROS TÊM MAIS OU MENOS RECLAMAÇÕES?**
 
 - R: Ordenando pelo **preço médio** dos planos **(vcm)** do **maior** valor para o **menor** vemos que não há mais **reclamações** para os meses mais caros. 
 
-**15. QUAL FOI A VARIAÇÃO DO PREÇO ANO A ANO?**
+**QUAL FOI A VARIAÇÃO DO PREÇO ANO A ANO?**
 
 - R: A variação do preço médio dos planos inicia em 2020 com R$ 700.26. 2021 vai para R$ 727.83. 
   Em seguida vai para R$ 779.90, depois vai para 908.01. 2024 chega em R$ 1.053.35 e finaliza em 2025 com R$ 1.114.13, ou seja, a partir de 2023 tivemos um salto significativo no preço médio dos planos. 
 
-**16. EXISTE DIFERENÇA ENTRE AUMENTO DE PREÇO E RECLAMAÇÕES?**
+**EXISTE DIFERENÇA ENTRE AUMENTO DE PREÇO E RECLAMAÇÕES?**
 
 - R: De **2020** até **2025** os preços vão subindo, o **IGR** inicia em **2021**, sobe em **2022** e **2023**, mas cai bastante em **2024**, depois volta a subir novamente em **2025**. Por tanto a única diferença significativa foi nesse período do **IGR** de **2023 - 2024**. De um modo geral é notável que quando houve aumento de preços na maioria de cada ano houve também reclamações. E novamente no ano de **2023** houve o maior índice de reclamações. 
 
