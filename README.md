@@ -337,23 +337,23 @@ até **2025** foi de **R$ 700** até **R$ 1.114**. O **IGR** médio foi de **72.
 
 - Crie um ambiente virtual e ative-o.
 - Instale todas as bibliotecas que estão no arquivo requirements.txt utilizando o comando:
-   - pip install -r requirements.txt
+   - **pip install -r requirements.txt**
 - Entre no postgres na sua máquina e crie um banco de dados vazio chamado **asn_database**.
 - Utilize os comandos a seguir para a criação do banco:
-   - HOST = localhost
-   - NAME = asn_database
-   - USER = postgres
-   - PASSWORD = 123
-   - PORT = 5432
-Por seguranca e boa prática, crie um arquivo .env e coloque essas credenciais do banco de dados criado. Ex: 
-    - DB_HOST=localhost
-    - DB_NAME=asn_database
-    - DB_USER=postgres
-    - DB_PASSWORD=123
-    - DB_PORT=5432
-- Execute no VSCode os dois scripts python para a criação da carga dos dados no banco.
-- Execute na sequência todos os scripts sql da pasta DDL para o restante das tabelas do banco.
-- Execute na sequência todos os scripts sql da pasta DML para a inserção dos dados nas tabelas novas criadas.
+   - **HOST = localhost**
+   - **NAME = asn_database**
+   - **USER = postgres**
+   - **PASSWORD = 123**
+   - **PORT = 5432**
+- Por seguranca e boa prática, crie um arquivo **.env** e coloque essas credenciais do banco de dados criado. Ex: 
+    - **DB_HOST=localhost**
+    - **DB_NAME=asn_database**
+    - **DB_USER=postgres**
+    - **DB_PASSWORD=123**
+    - **DB_PORT=5432**
+- Execute no **VSCode** os dois scripts python para a criação da carga dos dados no banco.
+- Execute na sequência todos os scripts sql da pasta **DDL** para o restante das tabelas do banco.
+- Execute na sequência todos os scripts sql da pasta **DML** para a inserção dos dados nas tabelas novas criadas.
 
 ## Stack Tecnológico
 
