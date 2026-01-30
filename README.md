@@ -3,7 +3,7 @@
 ![ans](imagens/ans.jpg)
 
 
-**Dados públicos da ANS | SQL - Python - BI (Looker Studio)**
+**Dados públicos da ANS**
 
 ## Visão Geral
 
@@ -351,8 +351,6 @@ até **2025** foi de **R$ 700** até **R$ 1.114**. O **IGR** médio foi de **72.
 - **ETL:** SQL + Python (pandas, psycopg2)
 
 - **Modelagem:** Star Schema
-
-- **Visualização:** Looker Studio
 
 
 
