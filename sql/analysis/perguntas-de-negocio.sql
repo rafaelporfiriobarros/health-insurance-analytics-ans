@@ -190,6 +190,19 @@ CROSS JOIN stats s
 WHERE ABS((m.total_reclamacoes - s.media) / s.desvio) > 2
 ORDER BY z_score DESC;
 
+-- Quais faixas etárias apresentam maior exposição financeira dado um nível médio de reclamação?
+
+
+select f.cd_faixa_etaria, 
+       avg(f.vcm) as vcm_medio,
+	   avg(r.igr) as igr_medio
+from fato_precificacao as f
+join fato_reclamacoes as r
+on f.id_tempo = r.id_tempo
+group by f.cd_faixa_etaria
+having avg(r.igr) > (select avg(igr) from fato_reclamacoes)
+order by igr_medio desc;
+
 
 
 

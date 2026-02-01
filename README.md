@@ -337,6 +337,20 @@ até **2025** foi de **R$ 700** até **R$ 1.114**. O **IGR** médio foi de **72.
 
 - R: Entre agosto e novembro de 2023 e julho de 2024 houve picos anormais de reclamações, indicando possíveis eventos específicos nesses períodos. Esses meses tiveram volume de reclamações significativamente acima do padrão, ultrapassando 2 desvios padrão da média. Usei Z-score sobre reclamações agregadas mensalmente para identificar períodos atípicos. Os picos ficaram concentrados em alguns meses específicos, o que indica eventos pontuais e abre espaço para análise causal com precificação.
 
+
+**QUAIS FAIXAS ETÁRIAS APRESENTAM MAIOR EXPOSIÇÃO FINANCEIRA DADO UM NÍVEL MÉDIO DE RECLAMAÇÃO?**
+
+- R: Ao analisar risco por faixa etária, observei que o preço cresce conforme o esperado, mas o indicador de reclamação disponível é agregado. Isso me levou a tratar o risco como exposição financeira e a deixar clara a limitação do dado. O preço aumenta conforme a faixa etária, mas o indicador de reclamação disponível não permite segmentação por idade, pois o IGR é agregado no nível da operadora/período.
+
+**REAJUSTES GERARAM AUMENTO PROPORCIONAL DE RECEITAS SEM PIORAR EXPERIÊNCIA?**
+
+- R: Identifiquei anos em que a seguradora conseguiu aumentar o preço médio sem elevar o nível de reclamações, indicando eficiência no reajuste e possível melhoria operacional.
+
+**QUAL SERIA O IMPACTO DE UM REAJUSTE MÉDIO DE +5% NO VCM?**
+
+- R: Se aplicarmos um reajuste médio de 5%, o VCM passaria, por exemplo, de R$700 para R$735, de R$1.053 para R$1.106, mantendo o mesmo perfil de carteira.”
+
+
 ## Como rodar esse projeto
 
 - Crie um ambiente virtual e ative-o.
