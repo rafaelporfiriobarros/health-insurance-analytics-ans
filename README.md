@@ -333,6 +333,10 @@ até **2025** foi de **R$ 700** até **R$ 1.114**. O **IGR** médio foi de **72.
 
 - R: De **2020** até **2025** os preços vão subindo, o **IGR** inicia em **2021**, sobe em **2022** e **2023**, mas cai bastante em **2024**, depois volta a subir novamente em **2025**. Por tanto a única diferença significativa foi nesse período do **IGR** de **2023 - 2024**. De um modo geral é notável que quando houve aumento de preços na maioria de cada ano houve também reclamações. E novamente no ano de **2023** houve o maior índice de reclamações. 
 
+**QUAIS MESES TIVERAM RECLAMAÇÕES FORA DO PADRÃO?**
+
+- R: Entre agosto e novembro de 2023 e julho de 2024 houve picos anormais de reclamações, indicando possíveis eventos específicos nesses períodos. Esses meses tiveram volume de reclamações significativamente acima do padrão, ultrapassando 2 desvios padrão da média. Usei Z-score sobre reclamações agregadas mensalmente para identificar períodos atípicos. Os picos ficaram concentrados em alguns meses específicos, o que indica eventos pontuais e abre espaço para análise causal com precificação.
+
 ## Como rodar esse projeto
 
 - Crie um ambiente virtual e ative-o.

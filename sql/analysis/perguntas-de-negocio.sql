@@ -1,55 +1,3 @@
-select * from fato_precificacao limit 10;
-
-select * from fato_reclamacoes limit 10;
-
-select count(*) from fato_reclamacoes;
-
-select count(*) from fato_precificacao;
-
-select * from fato_reclamacoes where igr > 100;
-
-select id_tempo, vcm
-from fato_precificacao
-order by vcm desc 
-limit 10;
-
-select id_tempo, avg(vcm) as vcm_medio
-from fato_precificacao
-group by id_tempo;
-
-select id_tempo, sum(qtd_reclamacoes) as total_reclamacoes
-from fato_reclamacoes
-group by id_tempo;
-
-select id_tempo, sum(qtd_reclamacoes) as total_reclamacoes
-from fato_reclamacoes
-group by id_tempo
-having sum(qtd_reclamacoes) > 100;
-
-select t.ano, t.mes, avg(f.vcm) as vcm_medio
-from fato_precificacao as f
-join dim_tempo as t
-on f.id_tempo = t.id_tempo
-group by t.ano, t.mes
-order by t.ano, t.mes;
-
-select p.nt_tipo, avg(f.vcm) as vcm_medio
-from fato_precificacao as f
-join dim_plano as p
-on f.id_plano = p.id_plano
-group by p.nt_tipo;
-
-select t.ano, avg(p.vcm) as vcm_medio, 
-              avg(r.igr) as igr_medio
-from fato_precificacao as p
-join fato_reclamacoes as r
-on p.id_tempo = r.id_tempo
-join dim_tempo as t
-on p.id_tempo = t.id_tempo
-group by t.ano;
-
-
-
 -- QUANTOS REGISTROS EXISTEM EM CADA TABELA FATO?
 
 select 'fato_precificacao' as tabela, count(*) from fato_precificacao
@@ -189,6 +137,73 @@ from fato_precificacao p
 join fato_reclamacoes r on p.id_tempo = r.id_tempo
 join dim_tempo t on p.id_tempo = t.id_tempo
 group by t.ano;
+
+-- Aumentos de preço estão sendo seguidos por aumento de reclamações? (usando with)
+
+with precificacao as (
+
+	select id_tempo, avg(vcm) as vcm_medio
+	from fato_precificacao
+	group by id_tempo
+),
+	reclamacoes as (
+		select id_tempo, avg(igr) as igr_medio
+		from fato_reclamacoes
+		group by id_tempo
+)
+select t.ano, t.mes, p.vcm_medio, r.igr_medio,
+	   r.igr_medio - lag(r.igr_medio) over (order by t.ano, t.mes) as delta_igr,
+	   p.vcm_medio - lag(p.vcm_medio) over (order by t.ano, t.mes) as delta_vcm
+from precificacao as p
+join reclamacoes as r
+on p.id_tempo = r.id_tempo
+join dim_tempo as t
+on t.id_tempo = p.id_tempo
+order by t.ano, t.mes;
+
+-- Quais meses tiveram reclamações fora do padrão?
+
+
+WITH mensal AS (
+    SELECT
+        t.ano,
+        t.mes,
+        SUM(r.qtd_reclamacoes) AS total_reclamacoes
+    FROM fato_reclamacoes r
+    JOIN dim_tempo t
+      ON r.id_tempo = t.id_tempo
+    GROUP BY t.ano, t.mes
+),
+stats AS (
+    SELECT
+        AVG(total_reclamacoes) AS media,
+        STDDEV(total_reclamacoes) AS desvio
+    FROM mensal
+)
+SELECT
+    m.ano,
+    m.mes,
+    m.total_reclamacoes,
+    (m.total_reclamacoes - s.media) / s.desvio AS z_score
+FROM mensal m
+CROSS JOIN stats s
+WHERE ABS((m.total_reclamacoes - s.media) / s.desvio) > 2
+ORDER BY z_score DESC;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
